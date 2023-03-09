@@ -100,12 +100,20 @@ namespace BackTracking
         public (int, int)[] recorridoSolucion(int[,] tableroSolucion)
         {
             (int x, int y)[] recorridoSolucion = new (int, int)[N * N];
+            bool encontrado;
             for (int movimiento = 0; movimiento < N * N; movimiento++)
                 for (int y = 0; y < N; y++)
+                {
+                    encontrado = false;
                     for (int x = 0; x < N; x++)
                         if (tableroSolucion[x, y] == movimiento)
+                        {
                             recorridoSolucion[movimiento] = (y, x);
-
+                            encontrado = true;
+                            break;
+                        }
+                    if (encontrado) break;
+                }
             return recorridoSolucion;
         }
 
