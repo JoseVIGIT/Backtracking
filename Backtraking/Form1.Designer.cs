@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.textRecorrido = new System.Windows.Forms.TextBox();
+            this.panelTablero = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnComenzar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -55,30 +55,30 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textRecorrido
             // 
-            this.textBox1.Location = new System.Drawing.Point(308, 180);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(339, 90);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
+            this.textRecorrido.Location = new System.Drawing.Point(308, 180);
+            this.textRecorrido.Multiline = true;
+            this.textRecorrido.Name = "textRecorrido";
+            this.textRecorrido.ReadOnly = true;
+            this.textRecorrido.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textRecorrido.Size = new System.Drawing.Size(339, 90);
+            this.textRecorrido.TabIndex = 0;
+            this.textRecorrido.TabStop = false;
             // 
-            // panel1
+            // panelTablero
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(10, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 284);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelTablero.BackColor = System.Drawing.SystemColors.Control;
+            this.panelTablero.Location = new System.Drawing.Point(10, 12);
+            this.panelTablero.Name = "panelTablero";
+            this.panelTablero.Size = new System.Drawing.Size(285, 285);
+            this.panelTablero.TabIndex = 1;
+            this.panelTablero.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTablero_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BackTracking.Properties.Resources.caballo;
-            this.pictureBox1.Location = new System.Drawing.Point(517, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(313, 66);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,6 +87,7 @@
             // 
             // btnComenzar
             // 
+            this.btnComenzar.Enabled = false;
             this.btnComenzar.Location = new System.Drawing.Point(511, 276);
             this.btnComenzar.Name = "btnComenzar";
             this.btnComenzar.Size = new System.Drawing.Size(136, 20);
@@ -101,7 +102,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "100";
+            this.textBox2.Text = "50";
             // 
             // label1
             // 
@@ -191,7 +192,7 @@
             this.txtAviso.Margin = new System.Windows.Forms.Padding(0);
             this.txtAviso.Name = "txtAviso";
             this.txtAviso.ReadOnly = true;
-            this.txtAviso.Size = new System.Drawing.Size(295, 21);
+            this.txtAviso.Size = new System.Drawing.Size(338, 21);
             this.txtAviso.TabIndex = 0;
             this.txtAviso.TabStop = false;
             this.txtAviso.Text = "Generando solución...";
@@ -307,8 +308,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnComenzar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textRecorrido);
+            this.Controls.Add(this.panelTablero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -328,8 +329,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textRecorrido;
+        private System.Windows.Forms.Panel panelTablero;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnComenzar;
         private System.Windows.Forms.TextBox textBox2;
